@@ -1,5 +1,6 @@
 ﻿using EjemploApiRest.Application;
 using EjemploApiRest.Entities;
+using EjemploApiRest.WebApi.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,9 +14,9 @@ namespace EjemploApiRest.WebApi.Controllers
     [ApiController]
     public class FootballController : ControllerBase
     {
-        private readonly IApplication<FootballTeamDto> _football;
+        private readonly IApplication<FootballTeam> _football;
 
-        public FootballController(IApplication<FootballTeamDto> football)
+        public FootballController(IApplication<FootballTeam> football)
         {
             _football = football;
         }
@@ -29,10 +30,11 @@ namespace EjemploApiRest.WebApi.Controllers
         [HttpPost]
         public IActionResult Save(FootballTeamDto dto)
         {
-            var item = new FootballTeamDto()
+            var item = new FootballTeam()
             {
                 Name = dto.Name,
-                Score = dto.Score
+                Score = dto.Score,
+                Manager = dto.Manager
             };
             return Ok(_football.Save(item));
         }

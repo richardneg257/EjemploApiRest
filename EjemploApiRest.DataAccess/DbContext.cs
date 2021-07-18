@@ -1,41 +1,41 @@
 ﻿using EjemploRestApi.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace EjemploApiRest.DataAccess
 {
-    public class DbContext<T> : IDbContext<T> where T : IEntity
+    public class DbContext<T> : IDbContext<T> where T : class, IEntity
     {
-        IList<T> _data;
+        private readonly ApiDbContext _contexto;
+        DbSet<T> _items;
 
-        public DbContext()
+        public DbContext(ApiDbContext contexto)
         {
-            _data = new List<T>();
+            _contexto = contexto;
+            _items = contexto.Set<T>();
         }
 
         public void Delete(int id)
         {
-            var e = _data.FirstOrDefault(x => x.Id.Equals(id));
-            if (e != null)
-                _data.Remove(e);
+
         }
 
         public IList<T> GetAll()
         {
-            return _data;
+            return _items.ToList();
         }
 
         public T GetById(int id)
         {
-            return _data.FirstOrDefault(x => x.Id.Equals(id));
+            return _items.FirstOrDefault(x => x.Equals(id));
         }
 
         public T Save(T entity)
         {
-            if (entity.Id.Equals(0))
-                _data.Add(entity);
-
+            _items.Add(entity);
+            _contexto.SaveChanges();
             return entity;
         }
     }
