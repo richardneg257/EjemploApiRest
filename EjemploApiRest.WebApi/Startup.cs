@@ -1,5 +1,7 @@
 using EjemploApiRest.Application;
+using EjemploApiRest.DataAccess;
 using EjemploApiRest.Repository;
+using EjemploRestApi.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +39,7 @@ namespace EjemploApiRest.WebApi
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IApplication<>), typeof(Application<>));
+            services.AddSingleton(typeof(IDbContext<>), typeof(DbContext<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,9 +13,9 @@ namespace EjemploApiRest.WebApi.Controllers
     [ApiController]
     public class FootballController : ControllerBase
     {
-        private readonly IApplication<FootballTeam> _football;
+        private readonly IApplication<FootballTeamDto> _football;
 
-        public FootballController(IApplication<FootballTeam> football)
+        public FootballController(IApplication<FootballTeamDto> football)
         {
             _football = football;
         }
@@ -23,11 +23,18 @@ namespace EjemploApiRest.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new FootballTeam()
+            return Ok(_football.GetAll());
+        }
+
+        [HttpPost]
+        public IActionResult Save(FootballTeamDto dto)
+        {
+            var item = new FootballTeamDto()
             {
-                Name = "San Lorenzo",
-                Score = 100
-            });
+                Name = dto.Name,
+                Score = dto.Score
+            };
+            return Ok(_football.Save(item));
         }
     }
 }
