@@ -1,4 +1,5 @@
 ﻿using EjemploApiRest.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EjemploApiRest.DataAccess
 {
-    public class ApiDbContext : DbContext
+    public class ApiDbContext : IdentityDbContext
     {
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
@@ -19,6 +20,7 @@ namespace EjemploApiRest.DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Entity>();
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
