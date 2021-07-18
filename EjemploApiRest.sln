@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.WebApi", "EjemploApiRest.WebApi\EjemploApiRest.WebApi.csproj", "{6A92AD43-832E-487D-9F07-65919207C2AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Application", "EjemploApiRest.Application\EjemploApiRest.Application.csproj", "{F38B2589-C72E-407F-A953-EC56ACDF2644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Entities", "EjemploApiRest.Entities\EjemploApiRest.Entities.csproj", "{7892B23A-A83C-4BE9-B047-D2D8CAB54872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Repository", "EjemploApiRest.Repository\EjemploApiRest.Repository.csproj", "{B66D31E2-0D83-4917-8304-A77F156A824D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Services", "EjemploApiRest.Services\EjemploApiRest.Services.csproj", "{0ABE1DE0-EBF8-4C10-AC57-67DDB644BB44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.DataAccess", "EjemploApiRest.DataAccess\EjemploApiRest.DataAccess.csproj", "{1C923DDB-1B91-4D94-B56A-4C58728F76B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploRestApi.Abstractions", "EjemploRestApi.Abstractions\EjemploRestApi.Abstractions.csproj", "{2CF40F32-8A03-4EC1-A004-46F5514AFF1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A92AD43-832E-487D-9F07-65919207C2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A92AD43-832E-487D-9F07-65919207C2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A92AD43-832E-487D-9F07-65919207C2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A92AD43-832E-487D-9F07-65919207C2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38B2589-C72E-407F-A953-EC56ACDF2644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38B2589-C72E-407F-A953-EC56ACDF2644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38B2589-C72E-407F-A953-EC56ACDF2644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38B2589-C72E-407F-A953-EC56ACDF2644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7892B23A-A83C-4BE9-B047-D2D8CAB54872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7892B23A-A83C-4BE9-B047-D2D8CAB54872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7892B23A-A83C-4BE9-B047-D2D8CAB54872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7892B23A-A83C-4BE9-B047-D2D8CAB54872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66D31E2-0D83-4917-8304-A77F156A824D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66D31E2-0D83-4917-8304-A77F156A824D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66D31E2-0D83-4917-8304-A77F156A824D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66D31E2-0D83-4917-8304-A77F156A824D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABE1DE0-EBF8-4C10-AC57-67DDB644BB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABE1DE0-EBF8-4C10-AC57-67DDB644BB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABE1DE0-EBF8-4C10-AC57-67DDB644BB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABE1DE0-EBF8-4C10-AC57-67DDB644BB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C923DDB-1B91-4D94-B56A-4C58728F76B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C923DDB-1B91-4D94-B56A-4C58728F76B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C923DDB-1B91-4D94-B56A-4C58728F76B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C923DDB-1B91-4D94-B56A-4C58728F76B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF40F32-8A03-4EC1-A004-46F5514AFF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF40F32-8A03-4EC1-A004-46F5514AFF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF40F32-8A03-4EC1-A004-46F5514AFF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF40F32-8A03-4EC1-A004-46F5514AFF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FDF33FB-6FCE-4A2B-9165-B1F7362395AE}
+	EndGlobalSection
+EndGlobal
